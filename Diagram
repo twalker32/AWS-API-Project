@@ -1,13 +1,15 @@
-## Architecture Diagram
+## 📐 Architecture Diagram
 
-Below is the high-level architecture for securing APIs on AWS:
+The diagram below shows the high-level architecture for securing APIs on AWS:
 
-[Insert Diagram Here – architecture-diagram.png]
+![Architecture Diagram](aws-api-protection-architecture.png)
 
-## Architecture Components
+---
 
-| Service               | Description                                                                 |
-|-----------------------|-----------------------------------------------------------------------------|
+## 🧩 Architecture Components
+
+| Service                | Description                                                                 |
+|------------------------|-----------------------------------------------------------------------------|
 | **API Gateway**        | Entry point for all API requests. Supports throttling, validation, and WAF. |
 | **Lambda (Backend)**   | Stateless compute that processes incoming API requests.                     |
 | **Lambda Authorizer**  | Custom token validation (JWT, OAuth2, etc.) before traffic reaches backend. |
@@ -16,4 +18,3 @@ Below is the high-level architecture for securing APIs on AWS:
 | **AWS WAF**            | Web Application Firewall rules to block common attacks.                     |
 | **IAM Roles/Policies** | Define least-privilege access to APIs, Secrets, and Lambda.                 |
 | **CloudWatch / X-Ray** | Logging, tracing, and metrics for observability and threat detection.       |
-
